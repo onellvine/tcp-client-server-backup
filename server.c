@@ -288,7 +288,7 @@ int main(int argc, char *argv[])
 
 void availableCommands(){
     printf("Available commands\n");
-    printf("LOGIN username password\n");
+    printf("LOGIN username:password:path_to_backups_dir\n");
     printf("MKDIR dirname\n");
     printf("CD dirname\n");
     printf("PUSH filename.ext\n");
