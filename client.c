@@ -65,6 +65,14 @@ int main(int argc, char *argv[])
                     printf("Error sending command!\n");
                 }
             }
+	    // accept the show commands command
+            if(strcmp(argv[1], "SHOW COMMANDS") == 0){
+		char command[128] = "SHOW COMMANDS";
+		int s = send(sock, command, sizeof(command), 0);
+		if (s < 1){
+		    printf("Error sending command!\n");
+		}
+            }
             // accept the ls command
             if (strcmp(argv[1], "LS") == 0)
             {

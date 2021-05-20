@@ -22,6 +22,7 @@ char *getFileContents(char *str);
 void getCommand(char *str);
 void readCredentials();
 void userData(char *client_msg);
+void availableCommands();
 
 char credentials[3][128];
 char user_data[3][128];
@@ -283,6 +284,17 @@ int main(int argc, char *argv[])
     }
 
     return 0;
+}
+
+void availableCommands(){
+    printf("Available commands\n");
+    printf("LOGIN username password\n");
+    printf("MKDIR dirname\n");
+    printf("CD dirname\n");
+    printf("PUSH filename.ext\n");
+    printf("PULL filename.txt\n");
+    printf("QUIT\n");
+    printf("\n");
 }
 
 int getFileSize(char str[])
